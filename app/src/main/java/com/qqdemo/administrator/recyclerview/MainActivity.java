@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-//        LinearLayoutManager manger = new LinearLayoutManager(this);
-//        manger.setOrientation(LinearLayoutManager.HORIZONTAL);
-//        GridLayoutManager manager = new GridLayoutManager(this, 3);
-
         StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(manager);
         mAdapter = new MyAdapter(dogList);
